@@ -1,0 +1,16 @@
+Angular Installation:
+---------------------
+Install nodejs : It will install node js and npm (node package manager)
+  node -v , npm - v
+Then install Angular CLI: 
+  The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shel
+
+  npm install -g @angular CLI
+
+  create new proj : ng new projname then ng serve
+  ng generate component name/service name/ directive name // generate     component/service
+
+  ng g m [module-name] --routing // create module with routhing 
+
+  ng add  // help us to add modules like ng add @angular/pwa, ng add @angular/material etc
+  
