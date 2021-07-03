@@ -1,15 +1,33 @@
-Install Material design:
+Material design:
+----------------
+
  ng add @angular/material
-  
+
+  Angular Material is a UI component library for Angular,help in constructing attractive, consistent, and functional web pages
+  with responsive design
+
+  ex: form fields, buttons, cards, checkbox dd,and many
+      <mat-form-field >  // form field
+          <mat-label>Enter username</mat-label> // label
+          <input matInput>  // nput
+        </mat-form-field>
+   <button mat-raised-button color="primary">Login</button>// buttons
+
 
   Change theme:
+
   Material design comes with 4 themes by default
   we can customise it as follows
 
   Steps : 1.create atheme.scss file and include styles array
           2.in angular.json under styles array remove default style url 
           3.the restart app // ng-serve 4. in theme.scss mention your themee color size etc . that it it will apply for all
-     
+
+    Also we can make alternative class in theme.scss file and we can apply thatclass name in html directly 
+      ex: .alternative{
+        same code mentioned in above steps
+      } 
+
       implementation guide: https://material.angular.io/guide/theming    
       colors ref :https://material-ui.com/customization/color/
  FlexLayout:
