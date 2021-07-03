@@ -2,6 +2,12 @@ Material design:
 ----------------
 
  ng add @angular/material
+ after install include required mat modules in app.comp.ts like
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
 
   Angular Material is a UI component library for Angular,help in constructing attractive, consistent, and functional web pages
   with responsive design
