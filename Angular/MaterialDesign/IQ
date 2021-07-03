@@ -1,0 +1,31 @@
+Install Material design:
+ ng add @angular/material
+  
+
+  Change theme:
+  Material design comes with 4 themes by default
+  we can customise it as follows
+
+  Steps : 1.create atheme.scss file and include styles array
+          2.in angular.json under styles array remove default style url 
+          3.the restart app // ng-serve 4. in theme.scss mention your themee color size etc . that it it will apply for all
+     
+      implementation guide: https://material.angular.io/guide/theming    
+      colors ref :https://material-ui.com/customization/color/
+ FlexLayout:
+ ------------
+  https://github.com/angular/flex-layout 
+  
+  npm i -s @angular/flex-layout @angular/cdk
+  after installation include in app.component.ts inside imports [FlexLayoutModule]
+
+  Flexlayout is liberory it provides layout API using Flexbox CSS + mediaQuery.
+  enables developers to easily specify different layouts, sizing, visibilities for different viewport sizes and display devices.
+
+  most of the layout functionality work as a 'custom directive' in angular below are examples
+  
+  fxLayoutAlign="center center" // align dive to center  
+  fxFlexFill // align div to cnter of the page
+  fxLayoutAlign="stretch" // stretch the div to fully occupation
+  fxLayout="column" // allign items column wise 
+  gdAlignRows  // align items row wise
