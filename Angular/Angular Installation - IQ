@@ -13,4 +13,22 @@ Then install Angular CLI:
   ng g m [module-name] --routing // create module with routhing 
 
   ng add  // help us to add modules like ng add @angular/pwa, ng add @angular/material etc
-  
+
+  ng build :
+  ---------------
+  // Compiles an Angular app into an output directory named dist/
+    dist contains .js files // index.html, main.js, polyfils.js, run time.js, style.css, fav icon
+
+    this ng build takes help of the 'webpack build tool', spme default options set in "angular.json under build section" 
+
+to find all comands info
+https://angular.io/cli/build#mode_edit---code----------descriptions
+
+WebPack:
+---------
+  Webpack is a popular module bundler, a tool for bundling application source code in convenient chunks and for loading that code from a server into a browser.
+
+  Webpack can preprocess and minify different non-JavaScript files such as TypeScript, SASS, and LESS files.
+
+  ng serve:
+  ----------
