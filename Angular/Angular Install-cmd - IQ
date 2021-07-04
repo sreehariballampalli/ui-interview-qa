@@ -30,5 +30,30 @@ WebPack:
 
   Webpack can preprocess and minify different non-JavaScript files such as TypeScript, SASS, and LESS files.
 
+  Basically cli internally have webpack to build app but,wt about with out cli? in such a sitution we use webpack
+
+  we manually create package.json and add dependencies and create folder strecure for the proj and configure web package
+  webpack: expect input, output, loaders
+
+  https://medium.com/hackernoon/webpack-for-angular-developers-c8584a60e627
+  
   ng serve:
   ----------
+    Build the application and start a web server.
+
+
+  ng congig:
+  ----------
+  Retrieves or sets Angular configuration values in the angular.json file for the workspace.
+  ng config <json-path> <value>
+
+  ng deploy:
+  ----------
+  We can deploy the APP from CLI it self through ng deploy command,
+  before that we need to configure build details in angular.json under build obj
+
+  "deploy": {
+        "builder": "@angular/fire:deploy",
+        "options": {}
+      }
+
