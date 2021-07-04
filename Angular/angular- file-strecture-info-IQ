@@ -1,6 +1,13 @@
 polyfills:
 ----------
+  Cross browser compatibility is a big part of modern web development. While the majority of browsers are now aligning to the new web standards, cross browser issues still occur for different reasons. Sometimes browsers have bugs, different level of support for a new technology.
   
+to solve this isssue angular provide polyfils
+  import 'core-js/es6/symbol';
+import 'core-js/es6/object';
+import 'core-js/es6/function';
+import 'core-js/es6/parse-int';
+import 'core-js/es6/parse-float'; 
 How Angular will start:
 -----------------------
 When ever we hit the app url it look for the main.ts file, 
