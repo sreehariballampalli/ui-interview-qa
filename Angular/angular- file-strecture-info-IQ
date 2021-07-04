@@ -1,2 +1,56 @@
 polyfills:
---------------
+----------
+  
+How Angular will start:
+-----------------------
+When ever we hit the app url it look for the main.ts file, 
+  main.ts file contains the which module to  load first
+
+
+platformBrowserDynamic().bootstrapModule(AppModule)// here main.ts file bootstrap the app module
+  .catch(err => console.error(err));
+
+  then it check for the appmodule.ts, this file contains the bootstrap array with component to load //  bootstrap: [AppComponent]
+  then it navigate to app.component.ts and find the selector // app-root
+
+  then index.html file hepls to render content in browser we will be mentioning the <app-root> </app-root> // base component html file inside body tag
+
+  main.ts: first file to load with bootstrap module
+  ----------
+  index.html: contains the app-rout // this is base component selector  also contains fav icon, view port info
+  ----------
+  *App.module.ts: has imports:[for any new modules install we have to import here// BROWSERMODULE, ROUTE MODULE, FORMS MODULE,ETC], 
+  declearations:[components we wll import here ], Providers:[any services we ll import here]
+
+  Angular.json: This file contains angular work space/ project specific information
+  -------------
+  schma, version details. project object :{
+    build configuration like build path,main, index ,ts config
+  }
+    styles array
+    scripts array
+    configuration obj
+    server configuration
+    test configuration
+
+
+  Package.json:
+  -------------
+    it contains information about npm packages, it has scripts{it contains how to start app etc // {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  }
+   dependencies {core, animations,forms,material, compailer, browser, rxjs }, dev dependencies{node,jsamine,cli, typescript }
+
+  Package.lock.json:
+  -----------------
+    it contains the complete info about each module like, name, version,sourece,integrety
+
+  Tsconfig: // specifies the base TypeScript and Angular compiler options that all projects in the workspace inheri
+  compilerOptions{
+
+  }
+
