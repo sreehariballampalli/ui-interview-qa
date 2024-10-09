@@ -1,1 +1,69 @@
 
+// function test() {
+//     console.log(x);
+//     var x = 5;
+// }
+// test();
+// console.log(x);
+
+// var number1  = 100;
+// var number2 = number1;
+// number1 = 20;
+// console.log(number2);
+
+// var array1 = [1, 2, 3];
+// var array2 = array1;
+// array1[0] = 4;
+// console.log(array2);
+
+// const person = {
+//     name: 'Alice',
+//     age: 25,
+//     city: 'New York'
+// };
+
+// let op = {name, age} = person;
+// console.log(op.name, op.age);
+
+
+// function abc(){
+//     var  a =5
+//     function InnerFunc(){
+//         console.log(a)
+//     }
+//     InnerFunc();
+// }
+
+// let Iabc = abc();
+//console.log(Iabc)
+
+setTimeout(() => console.log(""setTimeout1""));
+
+Promise.resolve().then(() => console.log(""Promise""));
+
+setTimeout(() => console.log(""setTimeout2""));
+
+console.log(""code"");
+
+const person = {
+    name: 'Alice',
+    age: 25,
+    city: 'New York'
+};
+------------------------------
+const obj = {
+  name: 'Kiran',
+
+  greet() { return `${this.name} says Hi`; },
+
+  arrowGreet: () => { return `${this.name} says Hi`; }
+}
+obj.greet();
+obj.arrowGreet() 
+
+const sayHi = obj.greet;
+sayHi();
+
+
+
+
