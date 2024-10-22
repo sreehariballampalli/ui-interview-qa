@@ -1,0 +1,53 @@
+
+MFE/Module fedration example
+-----------------------------
+planning / loading / closed
+
+planning - projetct
+ planning lib - contains ngrx things to expose the data to other consumers like loading mfe
+ planning mfe - which contains the part's which is owned by planning team only 
+ shall ui - contains common part between both projects, html css , planning team and data will be supplied by planning-lib for planning tab and data will be supplied by loading-lib for loading/closed tab 
+ * basically i works space contains - 2 projects (planning mfe, shall ui ) and  1 lib, node modules same for both projects
+ 
+loading - project 
+ loading mfe - contains the parts' that owned by loading team 
+ loading lib - contains ngrx things to expose the data to other consumers like planning mfe
+ * basically i works space contains - 1 projects (planning mfe, shall ui ) and  1 lib, node modules same for both projects
+ 
+ then using angular module fedration liberory (npm package), we can load the loading-lib modules in to planning and planning module in loading
+
+real examples:
+
+expose rosterModule to planning team to do this 
+1. expose from loading project 
+2. loading in planning project 
+
+1. Expose from loading project  - in webpack.config file we can use expose object 
+ 
+  exposes: {
+    "./LoadingModule": "./projects/loading/src/app/loading/loading.module.ts",
+    "./RosterModule": "./projects/loading/src/app/roster/roster.module.ts",
+    "./ModalModule": "./projects/loading/src/app/modal/modal.module.ts",
+  },
+
+2. load module from planning project 
+   in any routing.module.ts (app midule.ts ) we use module federation 
+import { loadRemoteModule } from '@angular-architects/module-federation';
+{
+    path: 'flightsummary',
+    // canActivate: [AuthGuard],
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'manifest',
+        remoteName: 'loading',
+        exposedModule: './RosterModule',
+      })
+        .then(m => m.RosterModule)
+        .catch(err => console.log('err', err)),
+  },
+
+here loadRemoteModule is majour thing 
+
+ 
+
+
