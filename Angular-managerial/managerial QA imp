@@ -1,1 +1,26 @@
-gdfgdf
+1. self introduction
+2. tell me dome ting sbout u r project 
+ A) . high level use of application 
+    . domain details
+    . tech stack used
+    .model we follow(ajail, water fall)
+
+    * currently I am working in AOT, its airport operations technology,
+    where it will help to get the reports of airport operations,
+    this will be used by people who is working in airport for delta airlines
+
+    its a application moderinization we have built the new app based on legacy.
+
+    Impact created: with the modernization we have reducer 70% of operational cost,
+    high scalable application, best user experience & easy to use, zero down time.
+
+    tech stack : angular, ngrx, rxjs, jest , Java quarkus, AWS , dynamo DB
+
+    we are following hybrid ajail model for it.
+
+3. roles & responsibility in your projec     
+
+
+
+    
+
