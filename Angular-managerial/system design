@@ -1,0 +1,51 @@
+HDL:
+high level design is phase in the SDLC where arcticture, strecture of the application planned & documented
+its essential step to bridge gap between requiremnts and actual implementation of app,
+the goal of hdlc is to provide blueprint & road map onn how system will function
+	
+	Key aspects 
+	------------------
+. understanding the client (Requirements understanding)
+. system archirtucture 
+. design
+. development 
+. to manage above thing we need Project manager 
+. stake holders (3rd patty dependencys)
+
+--------------------------------------------------------------
+
+instagram  HDL: 
+									HDL							
+functional requirement  													non functional requirement 
+  
+  User 																		refer below   
+   - user profile/settings														
+      - edit																	
+	  - alert
+	  - etc 
+   - user feed
+		- feed list
+		- feed creation/edit/delete
+		- feed likes/shares/comments etc 
+   - reels
+      - same as feed 
+   - status
+      -same as feed but some different rules 
+   - chat 
+      - chat with friend 
+
+non functional requirement 
+  archirtucture design   
+ 	- tech stack (fe, be, db, testing, deployment)
+  	- If I take Front end theh 
+		.framework
+		.design (figma)
+		.storage(statemanagement)
+		.accessibility 
+		.security
+		.performance
+		.testing frame work
+		.deployments
+		.seo
+		.source control
+		. etc
