@@ -7,7 +7,7 @@ planning - projetct
  planning lib - contains ngrx things to expose the data to other consumers like loading mfe
  planning mfe - which contains the part's which is owned by planning team only 
  shall ui - contains common part between both projects, html css , planning team and data will be supplied by planning-lib for planning tab and data will be supplied by loading-lib for loading/closed tab 
- * basically i works space contains - 2 projects (planning mfe, shall ui ) and  1 lib, node modules same for both projects
+ * basically 1 worksspace contains - 2 projects (planning mfe, shall ui ) and  1 lib, node modules same for both projects
  
 loading - project 
  loading mfe - contains the parts' that owned by loading team 
