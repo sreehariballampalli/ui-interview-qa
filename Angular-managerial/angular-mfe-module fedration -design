@@ -31,7 +31,7 @@ expose rosterModule to planning team to do this
   },
 
 2. load module from planning project 
-   in any routing.module.ts (app midule.ts ) we use module federation 
+   in any routing.module.ts(planning) (app midule.ts ) we use module federation 
 import { loadRemoteModule } from '@angular-architects/module-federation';
 {
     path: 'flightsummary',
