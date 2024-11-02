@@ -12,7 +12,7 @@ planning - projetct
 loading - project 
  loading mfe - contains the parts' that owned by loading team 
  loading lib - contains ngrx things to expose the data to other consumers like planning mfe
- * basically i works space contains - 1 projects (planning mfe, shall ui ) and  1 lib, node modules same for both projects
+ * basically 1 worksspace contains - 1 projects (planning mfe, shall ui ) and  1 lib, node modules same for both projects
  
  then using angular module fedration liberory (npm package), we can load the loading-lib modules in to planning and planning module in loading
 
