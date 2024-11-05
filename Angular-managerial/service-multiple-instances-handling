@@ -1,1 +1,50 @@
 
+root
+place inside provider array in componentn
+place inside provide araary in module
+ use factory method
+ 
+ 
+ providers : [
+ 
+ {
+  provide:'service 1', useFactory: () => new Myservice({id:1})
+ },
+ 
+ {
+  provide: 'service 2', usefactory: () => new My service({id:2})
+ }
+ 
+ ]
+ 
+ in componentn
+  constructor(@inject('service 1', public service1 : Myservice,
+  @inject('service 2', public service2: myservice))
+  )){
+  
+  }
+------------------
+use token injection :
+
+ same as above with injection token
+ 
+const servicetoken1 = new injectionToken<myservice>('service1');
+const servicetoken2  = new injectiontoken<myservice>('service2');
+
+
+providers: [
+
+{
+ provide : servicetoken1, usevalue: new myservice()
+
+},
+
+{
+ provide : servicetoken2, usevalue: new myservice()
+
+}
+
+
+]
+
+constructor(@inject(servicetoken1) public service1:myservice())
