@@ -1,0 +1,106 @@
+Angular:
+
+* Dependency Injection  : Dependency Injection (DI) in Angular is a design pattern that allows a class to receive its dependencies from external sources rather than creating them internally. This promotes modularity and reusability of code.
+
+* Routing : routing helps to navigate between different pages, lazy loading 
+  lazy loading: load modules on demand
+  flights module to load via lazy loading
+  create flight routing module and import into the flight module.ts  in imports
+   like  const route =[
+	 {
+		patch:'',
+		component :main component,
+children : [
+{ path:", component etc}
+]
+	}
+]
+
+export this routing module and import in flight module.ts
+ then in appmodule.ts  - routes array [ { 
+  path:''.
+loadChildern( ) = > import ('modulepath').then(module=> module.fligtmodule)
+ } ]
+
+* change detetion strategy in angular
+ - default
+ - on push 
+ Change detection in Angular  allows  to update the view whenever the model changes. By default, Angular uses the ChangeDetectionStrategy.Default, which checks the entire component tree for changes on every event, such as user interactions or HTTP responses
+
+*Intercptrs:
+
+In Angular, interceptors are a powerful feature that allows you to intercept and modify HTTP requests and responses. They are part of the @angular/common/http module and can be used for tasks such as logging, modifying headers, handling errors, or adding authentication tokens.
+
+* Life cycle hooks
+ 	ngOnChanges: Called before ngOnInit and whenever one or more data-bound input properties change.
+	ngOnInit: Invoked once the component is initialized. Ideal for initialization logic.
+	ngDoCheck: Called during every change detection run, allowing you to implement custom change detection.
+	ngAfterContentInit: Called once after the component's content (ng-content) has been projected into the view.
+	ngAfterContentChecked: Called after the projected content has been checked.
+	ngAfterViewInit: Called once after the component's view (and child views) has been initialized.
+	ngAfterViewChecked: Called after the component's view (and child views) have been checked.
+	ngOnDestroy: Invoked just before the component is destroyed. This is where you can clean up resources like subscriptions or timers.
+        afterRender : Runs every time all components have been rendered to the DOM.
+	afterNextRender: Runs once the next time that all components have been rendered to the DOM.
+	
+* Perforance optimization topics in angular
+ 
+  change detect strategy, lazy loadig , trackby , AOT, Serve sde rendering, clicent size cache, avoid memory leaks,
+
+
+
+* debouncing topic :  Definition: Debouncing ensures that a function is called only after a specified period.
+ If the event keeps firing (like typing in a search box), the function will not execute until the user has stopped triggering the event for a set duration.
+
+Throttling
+Definition: Throttling ensures that a function is called at most once in a specified period. 
+It’s useful for scenarios where you want to limit the number of times a function can fire over time.
+
+
+* secutity :
+1. Cross-Site Scripting (XSS)
+3. Insecure Dependencies
+2.Clickjacking
+4.Authorization and Authentication
+5. https calls
+Use tools like OWASP ZAP to scan for configuration issues.
+ dat scan, veracode scans etc
+
+
+-------------------------------------------
+Rxjs operaters :
+
+* combineLatest - combineLatest is an operator that combines the latest values from multiple observables. It emits an array of the latest values whenever any of the input observables emit a new value. This is particularly useful when you want to react to changes from multiple sources.
+
+*concatLatestFrom  -  allows you to combine the latest value from one observable with values from another observable whenever the first observable emits. It's useful for scenarios where you want to append the latest value of another observable to the emissions of a primary observable.
+
+*concat -  combine multiple observables sequentially. It subscribes to each observable in the order they are provided and only moves to the next observable once the current one completes. 
+
+* forkJoin - forkJoin operator is used to combine the last emitted values from multiple observables. It waits for all the input observables to complete, 
+    ForkJoin will only emit when all input observables have completed. If any observable does not complete, forkJoin will not emit.
+
+* mergeMap  - merge map : maps the values emitted by inner observal with the main observable and then return the new observable , * Ineer observable has to emit the value then only new observable
+		will emit the value 
+* switchMap - 
+* 
+* switchScan - 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
