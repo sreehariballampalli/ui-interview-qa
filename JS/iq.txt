@@ -1,0 +1,303 @@
+ html5 & css
+ ---------
+ HTML <canvas> element is used to draw graphics on a web page using javascript
+ 
+ inline,block level elements in html5
+  an inline element does not cause a line break (start on a new line) 
+  A block-level element always starts on a new line and takes up the full width of a page, 
+
+  positions 
+	static
+	relative
+	fixed
+	absolute
+		An element with position: absolute; is positioned relative to the nearest positioned parent (instead of positioned relative to the viewport, like fixed):
+	sticky
+ 
+ html5 features
+	cross browee
+	head,footer,body, ecttt canvas,audio,video 
+	storage,grad and drop 
+	nav,content,email,url 
+	
+	What is a Web Worker?
+		When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
+		A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+ 
+ What is the Geolocation API in HTML5?
+	The HTML Geolocation API is used to get the geographical position of a user.
+	(navigator.geolocation
+ 
+ What’s one main result if you do not specify a doctype in an HTML page?
+	New HTML5-specific tags will not be interpreted by the browser.
+ 
+ svg,canvas
+	SVG is a language for describing 2D graphics, but <canvas> allows you to draw 2D graphics on the fly using JavaScript.
+ What is a Manifest file?
+	A Manifest file is a simple text file that tells the browser what to cache and what not to cache.	
+	
+	
+ List the basic layout components of the CSS box model with a brief description for each.
+	border,content,margin,padding
+	
+sass?	
+	
+	
+	
+	
+ JQuery
+ ---------
+ load 
+	The load event occurs when a specified element has been loaded.
+		$("img").load(function(){
+		alert("Image loaded.");
+		})
+
+ ready
+	$( document ).ready() will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
+	
+ difference  .Onload() vs ready()
+	The main differences between the two are:
+	Body.Onload() event will be called only after the DOM and associated resources like images got loaded, 
+	but jQuery's document.ready() event will be called once the DOM is loaded i.e.,
+		it wont wait for the resources like images to get loaded.
+
+ event handling
+	binding events lick click,blur,hover,live,bind 
+ event bubbling vs event capturing
+		Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.
+		With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+		With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+ 
+ no conflict
+	Use the noConflict() method to specify a new name for the jQuery variable:
+	var jq = $.noConflict();
+ 
+	jq(document).ready(function(){
+    jq("button").click(function(){
+        jq("p").hide();
+    });
+	});
+	Tip: This method is useful when other JavaScript libraries use the $ for their functions.
+
+
+ What is method chaining in jQuery? Provide an example.	
+
+	Method chaining is a feature of jQuery that allows several methods to be executed on a jQuery selection in sequence in a single code statement. 
+
+	$( "button#play-movie" ).on( "click", playMovie )
+        .css( "background-color", "orange" )
+        show();
+		
+		
+		$( "div" ).css( "width", "300px" )
+		.add( "p" )
+		.css( "background-color", "blue" );
+		
+ What is the difference between jQuery.get() and jQuery.ajax()?		
+		jQuery.ajax() is the all-encompassing Ajax request method provided by jQuery. It allows for the creation of highly-customized Ajax requests, with options for how long to wait for a response, how to handle a failure, whether the request is blocking (synchronous) or non-blocking (asynchronous), what format to request for the response, and many more options.
+		jQuery.get() is a shortcut method that uses jQuery.ajax() under the hood, to create an Ajax request that is typical for simple retrieval of information. Other pre-built Ajax requests are provided by jQuery, such as jQuery.post(), jQuery.getScript(), and jQuery.getJSON().
+ 
+ What is the proper way in jQuery to remove an element from the DOM before its Promise is resolved?
+	.removeData() 
+	
+ What’s the difference between prop() and attr()?
+	The prop() method should be used to retrieve property values, e.g. DOM properties (like tagName, nodeName, defaultChecked) or your own custom made properties.
+	To retrieve HTML attributes, use the attr()
+	
+	
+	the jQuery.attr() will give the value of the first matching attribute in the original HTML file, while
+	
+	
+ JS
+ -----
+ immediate invoke 
+ call, apply
+ 
+ 
+ 
+ angular 1.x
+ --------------
+ 
+ 1. fetch data from api
+ 
+	.controller('AppCtrl', function($scope) {
+})
+
+.service('HttpService', function($http) {
+  return {
+    getPost: function() {
+      // $http returns a promise, which has a then function, which also returns a promise.
+      return $http.get('http://jsonplaceholder.typicode.com/posts/1')
+       .then(function (response) {
+       // In the response, resp.data contains the result. Check the console to see all of the data returned.
+       console.log('Get Post', response);
+       return response.data;
+      });
+    }
+  };
+});
+ 
+ 
+ 2. how to bootstrap angular app
+		a.
+	<!doctype html>
+		<html>
+		<body>
+		  <div id="year" ng-controller="Year">{{CurrentYear}}</div>
+		  <script src="angular.js"></script>
+		  <script>
+		  angular.module('example', [])
+		  .controller('Year', function($scope) {
+			$scope.CurrentYear = new Date().getFullYear();
+		  });
+		  angular.bootstrap(document.getElementById('year'), ['example']);
+		  </script>
+		</body>
+		</html>
+ 
+	b.   angular.element(function() {
+            angular.bootstrap(document, ['myApp']);
+			});
+			
+ 3.$scope and $routescope 
+	$Scope, scope available in with in the controller but $rootscope scope available in global it means available in all controller
+	
+	set : $rootScope.currentUser = userObj;
+	get : console.log($rootScope.currentUser);
+	
+	
+ 4.->ngSanitize -> Use ngSanitize to securely parse and manipulate HTML data in your application.
+    ->ngcloak-> Prevent the application from flicker at page load:	
+	ng-init used to initialize a variable
+	
+ 5.providers
+ 
+	A provider is an object with a $get() method. 
+	The injector calls the $get method to create a new instance of a service. The Provider can have additional methods which would allow for configuration of the provider.
+	  
+	AngularJS uses $provide to register new providers.  
+ 6.$q 
+	$q is an angular define a service. It’s same as new Promise(). But $q takes things to the next level by 
+	enhancing additional feature that developers can use to perform complex tasks more simply.
+	
+	it has resolve,reject 
+		promise.then(function(data) {
+			alert(data)  
+			})
+	$q.defer()
+	
+	$q.defer() return the instance of the promise constructor.
+		 Once you create a defer object there are following methods and properties that you can access from that object
+		 resolve,reject,notify,promise
+		   var obj = $q.defer();
+		   
+		   obj.promise
+	$q.all()
+			If a user need to send multiple request one shot,then the user can use $q.all() service.	   
+	
+	
+	The difference between a factory and a service is that a factory injects a plain function so AngularJS will call the function 
+	and a service injects a constructor. 
+	
+	
+	7. routing 
+	   $routeprovider ->provide route functionality
+		.when('/home',{
+		templateUrl:'url',
+		controller:"name of controller",
+		})
+
+	8.diff between directive vs service
+	
+	9.Explain what is injector in AngularJS?
+			The $injector service is responsible for determining the dependencies that a function declares and resolving those dependencies
+	10.watches &digest lopop in aj?
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+======================================
+1.use strict
+ a. is used to run the javascript in strict mode
+    ex: if variable not declear but if u try to access it wll not work in strict mode
+		
+2.arrow functions
+
+
+use strict
+this in js
+arrow functions
+... inn es6
+invoke function in js
+
+call back fun
+how to avoid for loop in js
+call,apply
+map
+
+
+call - chain construction of object 
+1.Spread attributes   (... is spread operator)
+A. ... convert list of eements into an array
+ex:
+
+let Ftfun = (...arr) =>{
+let sum =0;
+for(let a o arr){
+sun+= a;
+
+}
+console.log(sum);
+}
+Ftfun (1,2,3,4,5)
+
+
+function abc(){
+
+
+
+}
+
+
+let newfun = (a,b) =>{
+
+console.log(a)
+
+}
+
+
+https://www.toptal.com/javascript/interview-questions
+
+
+
+
+
+
+
+
+		
+		
+
+	
+	
+	
+	
+	
+	

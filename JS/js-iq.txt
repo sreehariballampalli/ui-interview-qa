@@ -1,0 +1,92 @@
+Call invokes the function immediately and allows you to pass in arguments one by one
+Apply invokes the function immediately and allows you to pass in arguments as an array.
+Bind returns a new function, and you can invoke/call it anytime you want by invoking a function.
+
+https://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind
+---------------------------------------------------------
+var let const :
+var : function scope/ global scope
+let : block level scope {}
+const : same as let but const we have to assign value when it decleared 
+
+
+function run() {
+  var foo = "Foo";
+  let bar = "Bar";
+
+  console.log(foo, bar); // Foo Bar
+
+  {
+    var moo = "Mooo"
+    let baz = "Bazz";
+    console.log(moo, baz); // Mooo Bazz
+  }
+
+  console.log(moo); // Mooo
+  console.log(baz); // ReferenceError
+}
+
+run();
+-------------------------------------------------------------------
+Hoisting:
+
+So, Hoisting is the process of setting up of memory space for our variables and functions.
+
+js is interpreted language it mean code run line by line
+
+console.log(a);
+var a=10, output is undefined bcz of at time js code run variable is decleared and value is not available
+-------------------------------------------------------------------------------------
+What is IIFE(Immediately Invoked Function Expression)
+IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. The signature of it would be as below,
+
+(function () {
+  // logic here
+})();
+
+-------------------------------------------------------------------------------------------
+What are closures : 
+
+A closure is where an inner function has access to variables in its outer function. That's probably the simplest one-line explanation you can get for closur
+or
+inner functions has access to his lexical scope (outer function variables and parameters)
+------------------------------
+Why do you need strict mode:
+Strict mode is useful to write "secure" JavaScript by notifying "bad syntax" into real errors.
+----------------------------------------------
+
+
+
+---------------------------------------------------------------
+--------------------------------------------
+arrow functions ?
+What is a promise
+array methods
+currying ?
+code examples
+
+--------------------------
+function Outer(){
+let a =1;
+return ()=>{console.log(a++);}
+} 
+
+const obj = Outer();
+obj(); // return outer function 
+obj(); // return outer function 
+Outer()(); // a+1 =2
+
+-------------------------
+
+const shape = {
+radius: 10,
+diameter(){
+return 2* this.radius;
+},
+perimeter: ()=> 2* Math.PI*this.radius
+}
+
+console.log(shape.diameter()) // 2* 10
+console.log(shape.perimeter()) // 2* 3 *10
+
+
